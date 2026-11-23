@@ -6,11 +6,11 @@ application:
       backend: http://codetta:8111
   public_path:
     - /
-
 services:
   codetta:
     # 镜像模式：Action 只读校验后把镜像改写/拷贝到懒猫仓库（official 商店要求 lazycat delivery）
-    image: ghcr.1ms.run/gavndev/codetta:0.11.0
+    # upstream: ghcr.io/gavndev/codetta:0.11.0
+    image: registry.lazycat.cloud/czyt/gavndev/codetta:4d4472527ebfdd8d
     healthcheck:
       test:
         - CMD-SHELL
@@ -29,7 +29,6 @@ services:
       - /lzcapp/var/codetta:/config
     tmpfs:
       - /tmp
-
 usage: |
   Codetta 是自托管音乐库管理器：修复标签、在 MusicBrainz 匹配专辑与封面、
   整理文件目录、通过 slskd 导入新音乐。浏览器打开即可使用（含手机）。
