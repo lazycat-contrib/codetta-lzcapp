@@ -41,8 +41,6 @@ stores:
       brief: "自托管音乐库管理器：修复标签、MusicBrainz 匹配专辑、整理文件、导入新音乐。"
       source: https://github.com/gavndev/codetta
       source_author: gavndev
-      support_pc: true
-      support_mobile: true
     retry:
       enabled: true
   private:
