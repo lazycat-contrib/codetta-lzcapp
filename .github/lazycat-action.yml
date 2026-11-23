@@ -1,0 +1,42 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/codetta.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: codetta
+
+build:
+  run_buildscript: false
+
+images:
+  - id: codetta
+    target: service
+    service: codetta
+    source: ghcr.io/gavndev/codetta
+    channel: stable
+    sort: semver
+    tag_regex: '^\d+\.\d+\.\d+$'
+    delivery:
+      mode: lazycat
+
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    continue_if_newer_version: true
+    retry:
+      enabled: true
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Codetta
+    summary: "自托管音乐库管理器：修复标签、MusicBrainz 匹配专辑与封面、整理文件、导入新音乐。"

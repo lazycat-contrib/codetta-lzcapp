@@ -1,0 +1,20 @@
+package: community.lazycat.app.codetta
+version: 0.11.0
+name: Codetta
+description: "Self-hosted music library manager: fix tags, match albums on MusicBrainz, organize files and bring in new music, from any browser. AGPL-3.0."
+homepage: https://github.com/gavndev/codetta
+author: gavndev
+license: AGPL-3.0
+min_os_version: 1.5.0
+permissions:
+  required:
+    - net.internet
+    - document.read
+    - document.write
+locales:
+  zh:
+    name: "Codetta 音乐管家"
+    description: "自托管音乐库管理器：修复标签、MusicBrainz 匹配专辑与封面、整理文件、导入新音乐，浏览器与手机均可使用。AGPL-3.0。"
+  en:
+    name: "Codetta"
+    description: "Self-hosted music library manager: fix tags, match albums on MusicBrainz, organize files and bring in new music, from any browser. AGPL-3.0."
