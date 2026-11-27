@@ -26,11 +26,11 @@ images:
     sort: semver
     tag_regex: '^\d+\.\d+\.\d+$'
     delivery:
-      mode: lazycat
+      mode: mirror
 
 stores:
   official:
-    enabled: true
+    enabled: false
     skip_if_version_exists: true
     continue_if_newer_version: true
     create_if_missing: true
