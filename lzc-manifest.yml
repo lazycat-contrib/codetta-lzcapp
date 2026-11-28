@@ -9,8 +9,8 @@ application:
 services:
   codetta:
     # 镜像模式：Action 只读校验后把镜像改写/拷贝到懒猫仓库（official 商店要求 lazycat delivery）
-    # upstream: ghcr.io/gavndev/codetta:0.15.3
-    image: registry.lazycat.cloud/czyt/gavndev/codetta:fb62673ea9eebc7b
+    # upstream: ghcr.io/gavndev/codetta:0.15.4
+    image: ghcr.1ms.run/gavndev/codetta:0.15.4
     healthcheck:
       test:
         - CMD-SHELL

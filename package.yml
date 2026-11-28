@@ -1,5 +1,5 @@
 package: community.lazycat.app.codetta
-version: 0.15.3
+version: 0.15.4
 name: Codetta
 description: "Self-hosted music library manager: fix tags, match albums on MusicBrainz, organize files and bring in new music, from any browser. AGPL-3.0."
 homepage: https://github.com/gavndev/codetta
